@@ -1,0 +1,11 @@
+#Videoads{
+	height: 300px;
+	display: flex;
+	align-items:center;
+	justify-content: center;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.nativemain,.cjrm.sa.epsa, #c_window_xEucqIjg, .nativemain{
+	display:none!important;
+}

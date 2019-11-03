@@ -1,0 +1,6 @@
+body > div{
+	display:none!important;
+}
+body .wrapper{
+	display:block!important;
+}
