@@ -12,7 +12,7 @@
 		  "css": ["styles.css", "utility/close-same.js"]
 		},		
 		{
-		  "matches": ["https://cnewvi.com/*", "https://*.securesmrt-dt.com/*", "https://www.datezone.com/*"],
+		  "matches": ["https://cnewvi.com/*", "https://*.securesmrt-dt.com/*", "https://www.datezone.com/*", "https://*.lvbet.pl/*"],
 		  "run_at": "document_start",
 		  "js": ["utility/close.js"]
 		},
