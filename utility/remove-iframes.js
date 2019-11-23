@@ -1,13 +1,15 @@
+"use strict"
 var scriptCounter = 0;
 var readyStateCheckInterval = setInterval(function() {		
 	if (document.readyState === "complete") {			
 		scriptCounter += 1;
 		if(scriptCounter > 10){
 			clearInterval(readyStateCheckInterval);
-		}		
-		var frames = document.getElementsByTagName("iframe");
-		for(var i = 0;i < frames.length; i++){
-			frames[i].remove();	
+		}
+		var elements = document.getElementsByTagName('iframe');
+		var length = elements.length - 1;
+		for (var i = length; i >= 0; i--) {
+			elements[i].remove();
 		}
 	}
-}, 100);
+}, 2000);

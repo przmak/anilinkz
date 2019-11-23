@@ -5,6 +5,11 @@
 	justify-content: center;
     font-size: 25px;
     font-family: sans-serif;
+	flex-flow: column;
+}
+
+#Videoads a + a {
+	margin-top: 20px;
 }
 .nativemain,.cjrm.sa.epsa, #c_window_xEucqIjg, .nativemain{
 	display:none!important;

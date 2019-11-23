@@ -1,0 +1,15 @@
+{
+  "esversion": 6,
+  "maxdepth": 3,
+  "maxstatements": 5,
+  "strict": true,
+  "globalstrict": true,
+  "browser": true,
+  "jquery": true,
+  "globals": {
+    "console": true,
+    "chrome": true,
+    "exports": true,
+    "import": true
+  }
+}
