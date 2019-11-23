@@ -1,60 +1,70 @@
 {
-	"name": "Anilinkz Adds Blocker",
-	"version": "1.0",
-    "description": "Removes crap from the website.",
-    "manifest_version": 2,
-	"permissions": ["declarativeContent", "storage", "activeTab"],
-	"content_scripts": [
-		{
-		  "matches": ["https://aniwatcher.com/*"],
-		  "run_at": "document_end",
-		  "js": ["libs/jquery3.4.1.min.js","swap-frame.js"],
-		  "css": ["styles.css", "utility/close-same.js"]
-		},		
-		{
-		  "matches": ["https://cnewvi.com/*", "https://*.securesmrt-dt.com/*", "https://www.datezone.com/*", "https://*.lvbet.pl/*"],
-		  "run_at": "document_start",
-		  "js": ["utility/close.js"]
-		},
-		{
-		  "matches": ["https://aniwatcher.com/*", "https://vidstreaming.io/*", "https://www.mp4upload.com/*", "https://www.yourupload.com/*"],
-		  "run_at": "document_end",
-		  "css": ["utility/hide-iframe.css"]
-		},
-		{
-		  "matches": ["https://vidstreaming.io/*", "https://www.mp4upload.com/*", "https://www.yourupload.com/*"],
-		  "run_at": "document_end",
-		  "js": ["utility/remove-iframes.js", "utility/remove-scripts.js"]
-		},
-		{
-		  "matches": ["https://vidstreaming.io/*"],
-		  "run_at": "document_end",
-		  "css": ["sites/vidstreaming/styles.css"]
-		},
-		{
-		  "matches": ["https://www.mp4upload.com/*"],
-		  "run_at": "document_end",
-		  "css": ["sites/mp4upload/styles.css"]
-		},
-		{
-		  "matches": ["https://www.yourupload.com/*"],
-		  "run_at": "document_end",
-		  "js": ["libs/jquery3.4.1.min.js", "sites/yourupload/index.js"]
-		}			
-	],
-	"page_action": {
-      "default_popup": "commands.html",
-	  "default_icon": {
-        "16": "images/remove-content.png",
-        "32": "images/remove-content.png",
-        "48": "images/remove-content.png",
-        "128": "images/remove-content.png"
-      }
+  "name": "Anilinkz Adds Blocker",
+  "version": "0.2",
+  "description": "Removes crap from the website.",
+  "manifest_version": 2,
+  "permissions": [
+    "declarativeContent",
+    "storage",
+    "activeTab",
+    "contentSettings",
+    "management"
+  ],
+  "background": {
+    "scripts": ["install.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://aniwatcher.com/*"
+      ],
+      "run_at": "document_start",
+      "css": [
+        "styles.css",
+        "./utility/hide-iframe.css"
+      ]
     },
-	"icons": {
+    {
+      "matches": [
+        "https://aniwatcher.com/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "./libs/jquery3.4.1.min.js",
+        "anilinkz.js"
+      ],
+      "match_about_blank": true
+    },
+    {
+      "matches": [
+        "https://vidstreaming.io/*"
+      ],
+      "run_at": "document_start",
+      "js": [
+        "./utility/remove-iframes.js",
+        "./utility/remove-scripts.js",
+        "./libs/jquery3.4.1.min.js",
+        "./vdo_sites/vidstreaming/main.js"
+      ],
+      "css": [
+        "./vdo_sites/vidstreaming/main.css"
+      ]
+    }
+  ],
+  "page_action": {
+    "default_popup": "commands.html",
+    "default_icon": {
       "16": "images/remove-content.png",
       "32": "images/remove-content.png",
       "48": "images/remove-content.png",
       "128": "images/remove-content.png"
     }
+  },
+  "icons": {
+    "16": "images/remove-content.png",
+    "32": "images/remove-content.png",
+    "48": "images/remove-content.png",
+    "128": "images/remove-content.png"
+  }
 }
