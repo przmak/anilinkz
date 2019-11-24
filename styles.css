@@ -14,3 +14,11 @@
 .nativemain,.cjrm.sa.epsa, #c_window_xEucqIjg, .nativemain{
 	display:none!important;
 }
+
+body > div.wrapper {
+	display: block !important;
+}
+
+body > div:last-child {
+	display: none !important;
+}

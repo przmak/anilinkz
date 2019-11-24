@@ -21,7 +21,8 @@
       ],
       "run_at": "document_start",
       "css": [
-        "styles.css"
+        "styles.css",
+        "./utility/hide-iframe.css"
       ]
     },
     {

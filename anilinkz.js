@@ -41,7 +41,7 @@ function clearFrames() {
  * Clearing Javascript from the page
  * ########################################################################
  * ########################################################################*/
-var clearingJavascriptTimeout = 500;
+var clearingJavascriptTimeout = 1000;
 var javascriptClearIntervalCounter = 0;
 
 function clearJavascript() {
@@ -68,7 +68,7 @@ function clearJavascript() {
  * ########################################################################*/
 function handleAboutBlank() {
     if (!window.parent.location.host || window.parent.location.host === "aniwatcher.com") {
-        setTimeout(window.close, 100);
+        setTimeout(window.close, 200);
     }
 }
 
