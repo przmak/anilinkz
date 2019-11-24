@@ -1,6 +1,6 @@
 {
   "name": "Anilinkz Adds Blocker",
-  "version": "0.2",
+  "version": "0.0.3",
   "description": "Removes crap from the website.",
   "manifest_version": 2,
   "permissions": [
